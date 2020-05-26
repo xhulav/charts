@@ -1,0 +1,31 @@
+{
+	"name": "xhulav/charts",
+	"type": "library",
+	"description": "Integration of Charts.js as Nette Framework component.",
+	"keywords": ["charts", "nette"],
+	"license": "MIT",
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "Vladimír Hůla",
+			"email": "xhulav@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"xhulav\\Charts\\": "src/"
+		}
+	},
+	"require": {
+		"php": "^7.2",
+		"ext-json": "*",
+		"nette/application": "^3.0.1",
+		"nette/di": "^3.0.0"
+	},
+	"require-dev": {
+		"nette/bootstrap": "^3.0",
+		"latte/latte": "^2.5",
+		"tracy/tracy": "^2.6"
+	}
+}

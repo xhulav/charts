@@ -1,0 +1,11 @@
+{varType xhulav\Charts\Core\Legend\Legend $legend}
+{varType xhulav\Charts\Core\Legend\Item $item}
+{varType string $units}
+
+<ul n:class="list-group, $legend->isLayoutHorizontal() ? list-group-horizontal" n:if="$legend->isShown()">
+	<li class="list-group-item flex-fill" n:foreach="$legend->getItems() as $item" style="border: 0">
+			<span style="display: inline-block; margin-right: 5px; width: 10px; height: 10px; background-color: {$item->getColor()|noescape};"></span>
+			{$item->getLabel()}{if $legend->showValues()} ({$item->getValue()|number:0:',':' '}{$units}){/if}
+			<span class="pull-right" n:if="$legend->showPercentages()">{$item->getPercentages()|number}%</span>
+	</li>
+</ul>
