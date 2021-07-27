@@ -1,0 +1,12 @@
+# Editor
+/.idea
+
+# Sources
+/src
+/example
+/.docs
+
+# PHP
+/composer.json
+/composer.lock
+/vendor
