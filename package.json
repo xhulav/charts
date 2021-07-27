@@ -1,0 +1,20 @@
+{
+	"name": "xhulav-charts",
+	"version": "0.1.0",
+	"description": "Integration of Charts.js as Nette Framework component.",
+	"main": "assets/chart-factory.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/xhulav/charts.git"
+	},
+	"author": "Vladimír Hůla",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/xhulav/charts/issues"
+	},
+	"homepage": "https://github.com/xhulav/charts#readme",
+	"dependencies": {
+		"jquery": "^3.5.1",
+		"chart.js": "^2.8.0"
+	}
+}
