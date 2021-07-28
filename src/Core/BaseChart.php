@@ -34,6 +34,10 @@ abstract class BaseChart extends Control
 	protected $customLegend = false;
 	/** @var string */
 	protected $units;
+	/** @var int */
+	protected $chartWidth = 8;
+	/** @var int */
+	protected $legendWidth = 4;
 
 	/**
 	 * @var null|bool
@@ -91,10 +95,13 @@ abstract class BaseChart extends Control
 		$this->legend->setLayout(Legend::HORIZONTAL);
 	}
 
-	public function legendOnRight()
+	public function legendOnRight($chartWidth = 8, $legendWidth = 4)
 	{
 		$this->layoutTemplate = __DIR__ . '/templates/legendRight.latte';
 		$this->legend->setLayout(Legend::VERTICAL);
+
+		$this->chartWidth = $chartWidth;
+		$this->legendWidth = $legendWidth;
 	}
 
 	/**
@@ -190,6 +197,8 @@ abstract class BaseChart extends Control
 		$this->getTemplate()->add('units', $this->units);
 		$this->getTemplate()->add('type', $this->getType());
 		$this->getTemplate()->add('data', $this->getChartData());
+		$this->getTemplate()->add('chartWidth', $this->chartWidth);
+		$this->getTemplate()->add('legendWidth', $this->legendWidth);
 	}
 
 	protected function getChartData()
